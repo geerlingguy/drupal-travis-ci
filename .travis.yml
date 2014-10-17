@@ -25,7 +25,6 @@ before_script:
 script:
   # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
   - cd drupal-8/core
-  - drupal-8/core/vendor/phpunit/phpunit/phpunit --coverage-text
-  - cd ../..
+  - ./vendor/phpunit/phpunit/phpunit --coverage-text
 
   # TODO: More testing...
