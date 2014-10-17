@@ -1,0 +1,21 @@
+---
+language: python
+python: "2.7"
+
+env:
+
+before_install:
+  - sudo apt-get update -qq
+
+install:
+  # Install and configure Ansible (used to easily configure our environment).
+  - pip install ansible
+  - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
+  - ansible-galaxy install geerlingguy.apache geerlingguy.mysql geerlingguy.php geerlingguy.composer geerlingguy.drush
+
+script:
+  # Configure our environment using Ansible.
+  - "ansible-playbook -i tests/inventory tests/setup.yml --connection=local --sudo"
+
+  # TODO: Do some tests here...
+  - "curl http://localhost/"
