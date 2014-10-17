@@ -13,3 +13,8 @@ Over time, the following will be illustrated through the included `.travis.yml` 
   - Static code analysis (using tools like PHPMD, CodeSniffer, etc.) and simple reporting.
 
 Please watch this space for updates!
+
+## Other Examples
+
+  - [DrupalCI by Midwestern Mac](http://drupalci.midwesternmac.com/) - Powered by Jenkins and SonarQube
+    This site (which is powered by the [drupalci-sonar-jenkins](https://github.com/geerlingguy/drupalci-sonar-jenkins) project) combines Jenkins with SonarQube to allow for deep PHP code analysis for Drupal core versions (and, in the future, other projects).
