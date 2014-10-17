@@ -21,10 +21,6 @@ before_script:
 
   # Clone Drupal 8.
   - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
-  # For testing, try 8.0.0-beta1.
-  - cd drupal-8
-  - git checkout 8.0.0-beta1
-  - cd ..
 
 script:
   # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
