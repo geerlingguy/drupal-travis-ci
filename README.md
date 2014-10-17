@@ -1,4 +1,4 @@
-# Drupal Travis-CI Demonstration
+# Drupal / Travis CI Demonstration
 
 [![Build Status](https://travis-ci.org/geerlingguy/drupal-travis-ci.svg)](https://travis-ci.org/geerlingguy/drupal-travis-ci)
 
@@ -16,5 +16,7 @@ Please watch this space for updates!
 
 ## Other Examples
 
-  - [DrupalCI by Midwestern Mac](http://drupalci.midwesternmac.com/) - Powered by Jenkins and SonarQube  
+Travis CI offers deep integration with GitHub projects, but is developer-centric and isn't flexible in allowing you to define different access controls, reporting, and repositories outside of GitHub. Solutions like Jenkins CI or Go CI might be a better fit, depending on your needs. Below are examples of other live CI projects for continous testing and analysis Drupal/PHP code.
+
+  - **[DrupalCI by Midwestern Mac](http://drupalci.midwesternmac.com/)** - Powered by Jenkins and SonarQube  
     This site (which is powered by the [drupalci-sonar-jenkins](https://github.com/geerlingguy/drupalci-sonar-jenkins) project) combines Jenkins with SonarQube to allow for deep PHP code analysis for Drupal core versions (and, in the future, other projects).
