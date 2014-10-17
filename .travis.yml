@@ -13,7 +13,7 @@ install:
   # Install and configure Ansible (used to easily configure our environment).
   - pip install ansible
   - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
-  - ansible-galaxy install geerlingguy.mysql geerlingguy.php geerlingguy.composer geerlingguy.drush
+  - ansible-galaxy install geerlingguy.mysql geerlingguy.php geerlingguy.php-xdebug geerlingguy.composer geerlingguy.drush
 
 before_script:
   # Configure our environment using Ansible.
