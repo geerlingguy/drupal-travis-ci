@@ -15,9 +15,15 @@ install:
   - "printf '[defaults]\nroles_path = ../' > ansible.cfg"
   - ansible-galaxy install geerlingguy.apache geerlingguy.mysql geerlingguy.php geerlingguy.composer geerlingguy.drush
 
-script:
+before_script:
   # Configure our environment using Ansible.
   - "ansible-playbook -i tests/inventory tests/setup.yml --connection=local --sudo"
 
-  # TODO: Do some tests here...
-  - "curl http://localhost/"
+  # Clone Drupal 8.
+  - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
+
+script:
+  # Run PHPUnit tests.
+  - drupal-8/core/vendor/phpunit/phpunit/phpunit --coverage-text
+
+  # TODO: More testing...
