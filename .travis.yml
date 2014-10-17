@@ -23,7 +23,7 @@ before_script:
   - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
 
 script:
-  # Run PHPUnit tests.
+  # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
   - drupal-8/core/vendor/phpunit/phpunit/phpunit --coverage-text
 
   # TODO: More testing...

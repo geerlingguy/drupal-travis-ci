@@ -6,6 +6,10 @@
     # Use default log file size so Travis CI VM allows MySQL restart.
     - mysql_innodb_log_file_size: "5M"
 
+  pre_tasks:
+    - name: Add ondrej repository so we can get PHP 5.5.
+      apt_repository: repo='ppa:ondrej/php5'
+
   roles:
     - geerlingguy.apache
     - geerlingguy.mysql
