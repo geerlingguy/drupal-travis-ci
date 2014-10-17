@@ -1,10 +1,12 @@
 ---
+# More information about configuring your Travis build using this .travis.yml
+# file can be found here: http://docs.travis-ci.com/user/build-configuration/
+
 language: python
 python: "2.7"
 
-env:
-
 before_install:
+  # Make sure we have the latest versions of all our packages.
   - sudo apt-get update -qq
 
 install:
