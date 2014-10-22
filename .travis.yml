@@ -19,17 +19,19 @@ before_script:
   # Configure our environment using Ansible.
   - "ansible-playbook -i tests/inventory tests/setup.yml --connection=local --sudo"
 
-  # Clone Drupal 8.
-  # - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
-
-script:
   # Debugging.
   - php --version
   - php --ini
   - php -m
-  - ls -lah /etc/php5/cli
+  - apache -v
+  - drush status
+
+  # Clone Drupal 8.
+  - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
+
+script:
   # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
-  # - cd drupal-8/core
-  # - ./vendor/phpunit/phpunit/phpunit --coverage-text
+  - cd drupal-8/core
+  - ./vendor/phpunit/phpunit/phpunit --coverage-text
 
   # TODO: More testing...
