@@ -15,4 +15,4 @@
     - geerlingguy.php-xdebug
     - geerlingguy.composer
     - geerlingguy.drush
-    - geerlingguy.drupal
+    # - geerlingguy.drupal

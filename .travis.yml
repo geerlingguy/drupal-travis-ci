@@ -23,10 +23,12 @@ before_script:
   - php --version
   - php --ini
   - php -m
-  - apache -v
+  - apache2 -v
   - drush status
 
   # Clone Drupal 8.
+  # TODO: Might want to just use the geerlingguy.drupal role—that way it's a
+  # simple matter of using that pre-installed copy of Drupal. Flexibility++
   - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
 
 script:
