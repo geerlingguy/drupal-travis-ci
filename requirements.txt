@@ -1,0 +1,6 @@
+geerlingguy.mysql
+geerlingguy.php
+geerlingguy.php-xdebug
+geerlingguy.composer
+geerlingguy.drush
+geerlingguy.drupal

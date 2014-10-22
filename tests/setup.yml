@@ -2,9 +2,8 @@
 - hosts: localhost
   remote_user: root
 
-  vars:
-    # Use default log file size so Travis CI VM allows MySQL restart.
-    - mysql_innodb_log_file_size: "5M"
+  vars_files:
+    - vars.yml
 
   pre_tasks:
     - name: Add ondrej repository so we can get PHP 5.5.
@@ -16,3 +15,4 @@
     - geerlingguy.php-xdebug
     - geerlingguy.composer
     - geerlingguy.drush
+    - geerlingguy.drupal

@@ -1,0 +1,3 @@
+---
+# Use default log file size so Travis CI VM allows MySQL restart.
+mysql_innodb_log_file_size: "5M"
