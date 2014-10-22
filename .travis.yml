@@ -24,7 +24,7 @@ before_script:
   - php --ini
   - php -m
   - apache2 -v
-  - drush status
+  # - drush status
 
   # Clone Drupal 8.
   # TODO: Might want to just use the geerlingguy.drupal role—that way it's a
