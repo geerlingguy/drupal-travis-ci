@@ -31,6 +31,6 @@ script:
   - ./vendor/phpunit/phpunit/phpunit --coverage-text
 
   # Make sure home page loads.
-  - curl http://drupaltest.dev/
+  - curl --head http://drupaltest.dev/
 
   # TODO: More testing...
