@@ -27,7 +27,7 @@ before_script:
 
   # Test environment setup.
   - cd /var/www/drupal
-  - drush --uri http://drupaltest.dev/ en -y simpletest path
+  - drush --uri=http://drupaltest.dev/ en -y simpletest path
 
 script:
   # Run tests.
