@@ -25,10 +25,14 @@ before_script:
   - php -m
   - apache2 -v
 
+  # Test environment setup.
+  - cd /var/www/drupal
+  - drush --uri http://drupaltest.dev/ en -y simpletest path
+
 script:
-  # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
-  - cd /var/www/drupal/core
-  - ./vendor/phpunit/phpunit/phpunit --coverage-text
+  # Run tests.
+  - cd /var/www/drupal
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
 
   # Make sure home page loads.
   - curl --head http://drupaltest.dev/
