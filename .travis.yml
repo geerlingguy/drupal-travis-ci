@@ -27,12 +27,17 @@ before_script:
 
   # Test environment setup.
   - cd /var/www/drupal
-  - drush --uri=http://drupaltest.dev/ en -y simpletest path
+  - drush --uri=http://drupaltest.dev/ dl -y honeypot
+  - drush --uri=http://drupaltest.dev/ en -y honeypot simpletest path
 
 script:
-  # Run tests.
   - cd /var/www/drupal
+
+  # Run simpletests on a core module.
   - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
+
+  # Run simpletests on a contrib module.
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ Honeypot
 
   # Make sure home page loads.
   - curl --head http://drupaltest.dev/
