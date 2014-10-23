@@ -23,13 +23,14 @@ before_script:
   - php --version
   - php --ini
   - php -m
-
-  # Clone Drupal 8.
-  - git clone --branch 8.0.x http://git.drupal.org/project/drupal.git drupal-8
+  - apache2 -v
 
 script:
   # Run PHPUnit tests (See: https://www.drupal.org/node/2116263).
-  - cd drupal-8/core
+  - cd /var/www/drupal/core
   - ./vendor/phpunit/phpunit/phpunit --coverage-text
+
+  # Make sure home page loads.
+  - curl http://drupaltest.dev/
 
   # TODO: More testing...

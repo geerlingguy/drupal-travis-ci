@@ -15,4 +15,8 @@
     - geerlingguy.php-xdebug
     - geerlingguy.composer
     - geerlingguy.drush
-    # - geerlingguy.drupal
+    - geerlingguy.drupal
+
+  tasks:
+    - name: Ensure curl is installed.
+      apt: name=curl state=installed
