@@ -43,7 +43,8 @@ script:
   # Run SimpleTests on a contrib module.
   - php scripts/run-tests.sh --url http://drupaltest.dev/ honeypot
 
-  # Run core PHPUnit tests.
+  # Run core PHPUnit tests with and without coverage reporting.
+  - ./vendor/phpunit/phpunit/phpunit
   - ./vendor/phpunit/phpunit/phpunit --coverage-text
 
   # TODO: More testing...
