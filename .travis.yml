@@ -29,6 +29,7 @@ before_script:
   - ls -lah /var/www/drupal/sites/all/modules
 
   # Test environment setup.
+  - sudo chown -R travis:travis /var/www/drupal
   - cd /var/www/drupal
   - drush --uri=http://drupaltest.dev/ dl -y honeypot
   - drush --uri=http://drupaltest.dev/ en -y honeypot simpletest path
