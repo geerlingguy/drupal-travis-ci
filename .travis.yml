@@ -37,9 +37,6 @@ script:
 
   - cd /var/www/drupal/core
 
-  # Run core PHPUnit tests.
-  - ./vendor/phpunit/phpunit/phpunit --coverage-text
-
   # List all available tests
   - php scripts/run-tests.sh --url http://drupaltest.dev/ --list
 
@@ -47,6 +44,9 @@ script:
   - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
 
   # Run SimpleTests on a contrib module.
-  - php scripts/run-tests.sh --url http://drupaltest.dev/ Honeypot
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ honeypot
+
+  # Run core PHPUnit tests.
+  - ./vendor/phpunit/phpunit/phpunit --coverage-text
 
   # TODO: More testing...
