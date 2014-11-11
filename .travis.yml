@@ -25,6 +25,9 @@ before_script:
   - php -m
   - apache2 -v
 
+  - whoami
+  - ls -lah /var/www/drupal/sites/all/modules
+
   # Test environment setup.
   - cd /var/www/drupal
   - drush --uri=http://drupaltest.dev/ dl -y honeypot
