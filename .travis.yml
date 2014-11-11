@@ -37,9 +37,6 @@ script:
 
   - cd /var/www/drupal/core
 
-  # List all available tests
-  - php scripts/run-tests.sh --url http://drupaltest.dev/ --list
-
   # Run SimpleTests on a core module.
   - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
 
