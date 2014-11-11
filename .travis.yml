@@ -25,9 +25,6 @@ before_script:
   - php -m
   - apache2 -v
 
-  - whoami
-  - ls -lah /var/www/drupal/sites/all/modules
-
   # Test environment setup.
   - sudo chown -R travis:travis /var/www/drupal
   - cd /var/www/drupal
