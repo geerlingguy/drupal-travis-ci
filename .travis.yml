@@ -32,17 +32,21 @@ before_script:
   - drush --uri=http://drupaltest.dev/ en -y honeypot simpletest path
 
 script:
-  - cd /var/www/drupal
-
-  - php scripts/run-tests.sh --url http://drupaltest.dev/ --list
-
-  # Run simpletests on a core module.
-  - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
-
-  # Run simpletests on a contrib module.
-  - php scripts/run-tests.sh --url http://drupaltest.dev/ Honeypot
-
   # Make sure home page loads.
   - curl --head http://drupaltest.dev/
+
+  - cd /var/www/drupal
+
+  # Run core PHPUnit tests.
+  - ./vendor/phpunit/phpunit/phpunit --coverage-text
+
+  # List all available tests
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ --list
+
+  # Run SimpleTests on a core module.
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
+
+  # Run SimpleTests on a contrib module.
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ Honeypot
 
   # TODO: More testing...
