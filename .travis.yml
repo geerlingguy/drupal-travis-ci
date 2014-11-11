@@ -37,6 +37,8 @@ before_script:
 script:
   - cd /var/www/drupal
 
+  - php scripts/run-tests.sh --url http://drupaltest.dev/ --list
+
   # Run simpletests on a core module.
   - php scripts/run-tests.sh --url http://drupaltest.dev/ Path
 
