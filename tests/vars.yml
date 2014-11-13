@@ -1,6 +1,8 @@
 ---
 # Use default log file size so Travis CI VM allows MySQL restart.
 mysql_innodb_log_file_size: "5M"
+mysql_wait_timeout: 28800
+mysql_max_allowed_packet: "128M"
 
 # Set the core version (git branch or tag) and core install path.
 drupal_core_version: "8.0.x"
