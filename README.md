@@ -21,3 +21,5 @@ Travis CI offers deep integration with GitHub projects, but is developer-centric
 
   - **[DrupalCI by Midwestern Mac](http://drupalci.midwesternmac.com/)** - Powered by Jenkins and SonarQube
     This site (which is powered by the [drupalci-sonar-jenkins](https://github.com/geerlingguy/drupalci-sonar-jenkins) project) combines Jenkins with SonarQube to allow for deep PHP code analysis for Drupal core versions (and, in the future, other projects).
+  - **[Lightning .travis.yml](http://cgit.drupalcode.org/lightning/tree/.travis.yml)**
+  - **[Negawatt server .travis.yml](https://github.com/Gizra/negawatt-server/blob/master/.travis.yml)
